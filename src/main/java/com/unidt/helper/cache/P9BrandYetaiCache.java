@@ -68,7 +68,7 @@ public class P9BrandYetaiCache extends AbstractCache {
                         Document monthFilters = new Document("bi_name", "brand_shop_prop_month")
                                 .append("venue", venue).append("type", type).append("dt_year", y).append("dt_month", m);
                         getLog().info("Cache: " + y + "/" + m + " " + venue + " " + type);
-                        addCacheTask(realTimeFilters.toJson());
+                        addCacheTask(monthFilters.toJson());
                     }
                 }
             }
